@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "origin",
+	"version": "${version}",
+	"name": "Origin",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Jaanai",
+		"ABlueCat123"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Jaanai-AAM/Origin"
+	},
+	"license": "MIT",
+	"icon": "assets/origin/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jaanai.Origin"
+		],
+		"client": [
+			"net.jaanai.OriginClient"
+		],
+		"fabric-datagen": [
+			"net.jaanai.OriginDataGenerator"
+		]
+	},
+	"mixins": [
+		"origin.mixins.json",
+		{
+			"config": "origin.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
